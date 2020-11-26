@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Onboarding UI',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'muli'),
       home: OnboardingScreen(),
     );
   }

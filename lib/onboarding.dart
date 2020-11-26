@@ -24,10 +24,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return AnimatedContainer(
       duration: Duration(milliseconds: 150),
       margin: EdgeInsets.symmetric(horizontal: 8.0),
-      height: 8.0,
+      height: 4.0,
       width: isActive ? 24.0 : 16.0,
       decoration: BoxDecoration(
-        color: isActive ? Colors.white : Color(0xFF7B51D3),
+        color: isActive ? Colors.white : Color(0xff9672FB),
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
     );
@@ -40,7 +40,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         value: SystemUiOverlayStyle.light,
         child: Container(
           decoration: BoxDecoration(
-           color: Color(0xff9672FB)
+           color: Color(0xffF6F6F9)
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 40.0),
@@ -53,15 +53,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onPressed: () => print('Skip'),
                     child: Text(
                       'Skip',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.0,
-                      ),
+                      style: skipStyle
                     ),
                   ),
                 ),
                 Container(
-                  height: 600.0,
+                  height: 480.0,
                   child: PageView(
                     physics: ClampingScrollPhysics(),
                     controller: _pageController,
@@ -76,25 +73,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
+                            Center(child:Text(
+                              'Welcome to the Pennee mobile app!',
+                              style: peneeOnboardingTitle,
+                              textAlign: TextAlign.center,
+                            )),
                             Center(
                               child: Image(
                                 image: AssetImage(
-                                  'assets/images/onboarding0.png',
+                                  'assets/images/A3.png',
                                 ),
-                                height: 300.0,
-                                width: 300.0,
                               ),
                             ),
-                            SizedBox(height: 30.0),
-                            Text(
-                              'Connect people\naround the world',
-                              style: kTitleStyle,
-                            ),
-                            SizedBox(height: 15.0),
-                            Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                              style: kSubtitleStyle,
-                            ),
+                            
                           ],
                         ),
                       ),
@@ -106,7 +97,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Center(
                               child: Image(
                                 image: AssetImage(
-                                  'assets/images/onboarding1.png',
+                                  'assets/images/A3.png',
                                 ),
                                 height: 300.0,
                                 width: 300.0,
@@ -133,7 +124,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Center(
                               child: Image(
                                 image: AssetImage(
-                                  'assets/images/onboarding2.png',
+                                  'assets/images/A3.png',
                                 ),
                                 height: 300.0,
                                 width: 300.0,
@@ -162,8 +153,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 _currentPage != _numPages - 1
                     ? Expanded(
                         child: Align(
-                          alignment: FractionalOffset.bottomRight,
+                          alignment: FractionalOffset.bottomCenter,
                           child: FlatButton(
+                            color: Color(0Xff9672FB),
+                            minWidth: 111,
+                            height: 62,
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(31),
+                            side: BorderSide(color: Color(0Xff9672FB))
+                          ),
                             onPressed: () {
                               _pageController.nextPage(
                                 duration: Duration(milliseconds: 500),
@@ -176,16 +174,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               children: <Widget>[
                                 Text(
                                   'Next',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 22.0,
-                                  ),
-                                ),
-                                SizedBox(width: 10.0),
-                                Icon(
-                                  Icons.arrow_forward,
-                                  color: Colors.white,
-                                  size: 30.0,
+                                  style: onboardingNextBtnTXT
                                 ),
                               ],
                             ),
