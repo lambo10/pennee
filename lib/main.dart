@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Onboarding UI',
+      title: 'penee',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'muli'),
       home: OnboardingScreen(),
