@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ]
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(55, 30, 140, 10),
+                padding: EdgeInsets.fromLTRB(0, 30, 140, 10),
                 child:Text(
                               'Please Log in',
                               style: loginTitleSub,
@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             )),
 
             Padding(
-                padding: EdgeInsets.fromLTRB(60, 30, 89, 10),
+                padding: EdgeInsets.fromLTRB(40, 30, 50, 10),
                 child:TextField(decoration: InputDecoration(
                   labelText: 'Email',
                   labelStyle: loginLabelStyle,
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),)),
 
                 Padding(
-                padding: EdgeInsets.fromLTRB(60, 10, 89, 10),
+                padding: EdgeInsets.fromLTRB(40, 10, 50, 10),
                 child:TextField(decoration: InputDecoration(
                   labelText: 'Password',
                   labelStyle: loginLabelStyle,
