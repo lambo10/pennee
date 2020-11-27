@@ -63,7 +63,8 @@ flutter:
     - assets/images/A5.png
     - assets/images/A6.png
     - assets/images/A7.png 
-    - assets/images/A8.png
+    - assets/images/A8.png 
+    - assets/images/splashBack.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

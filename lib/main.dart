@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'penee',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'muli'),
-      home: secondScreen(),
+      home: SplashScreen(),
     );
   }
 }
