@@ -27,6 +27,7 @@ var _allItems_opacity = 0.0;
 
 var _backround1_opacity = 0.0;
 var _backround2_opacity = 1.0;
+var _nextBTN_opacity = 1.0;
 
 
 _startAnim(){
@@ -45,14 +46,15 @@ _startAnim(){
 
     _backround1_opacity = 1.0;
     _backround2_opacity = 0.0;
+    _nextBTN_opacity = 0.0;
   });
 }
 
 @override
   void initState() {
-   Timer _timer = new Timer(const Duration(milliseconds: 4000), () {
-    _startAnim();
-    });
+  //  Timer _timer = new Timer(const Duration(milliseconds: 4000), () {
+  //   _startAnim();
+  //   });
   }
 
   Route _createRoute() {
@@ -63,12 +65,12 @@ _startAnim(){
       var end = Offset.zero;
       var curve = Curves.fastLinearToSlowEaseIn;
 
-      var tween = Tween().chain(CurveTween(curve: curve));
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
 
-      return FadeTransition(
-              opacity: animation,
-              child: child,
-              );
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
     },
   );
 }  
@@ -170,6 +172,37 @@ _startAnim(){
                                 Text(
                                   'Vendor',
                                   style: onboardingNextBtnTXT
+                                ),
+                              ],
+                            ),
+                          ),
+          ) ),
+    
+    AnimatedContainer(
+          duration: Duration(seconds: 1),
+          curve: Curves.fastOutSlowIn,
+          alignment: Alignment(0.0, 0.9),
+          child: AnimatedOpacity(
+            opacity: _nextBTN_opacity,
+          duration: Duration(milliseconds: 100),
+          child: FlatButton(
+                            color: Colors.white,
+                            minWidth: 130,
+                            height: 62,
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(31),
+                            side: BorderSide(color: Colors.white)
+                          ),
+                            onPressed: () {
+                              _startAnim();
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Text(
+                                  'Next',
+                                  style: onboardingNextBtnTXTThemeColor
                                 ),
                               ],
                             ),
