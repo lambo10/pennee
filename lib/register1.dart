@@ -117,7 +117,7 @@ class _Register1ScreenState extends State<Register1Screen> {
                             minWidth: 295,
                             height: 62,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(31),
+                                borderRadius: BorderRadius.circular(7),
                                 side: BorderSide(color: Color(0xff9672FB))),
                             onPressed: () {
                               Navigator.of(context).push(_createRoute());

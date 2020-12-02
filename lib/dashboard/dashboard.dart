@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pennee/dashboard/sales.dart';
 import 'home.dart';
 // import 'profileWidget.dart';
 // import 'save.dart';
@@ -42,8 +43,12 @@ class SampleAppPage extends StatefulWidget {
 }
 
 class _SampleAppPageState extends State<SampleAppPage> {
-  int _currentIndex = 0;
+  int _currentIndex = 2;
   final List<Widget> _children = [
+    homeWget(),
+    homeWget(),
+    homeWget(),
+    salesWget(),
     homeWget(),
   ];
 
