@@ -263,6 +263,23 @@ final referal_levelPageConLevTXT = GoogleFonts.muli(
     color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600);
 
 final referal_levelPageWContHeader = GoogleFonts.muli(
-    color: Color(0xff24214C), fontSize: 20, fontWeight: FontWeight.w600);
+    color: Color(0xff24214C), fontSize: 15, fontWeight: FontWeight.w600);
 final referal_levelPageWContNormTXT = GoogleFonts.muli(
-    color: Color(0xffA2A1B2), fontSize: 15, fontWeight: FontWeight.w600);
+    color: Color(0xffA2A1B2), fontSize: 12, fontWeight: FontWeight.w600);
+final referal_levelPageWContHeaderWhite = GoogleFonts.muli(
+    color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600);
+final referal_levelPageWContNormTXTWhite = GoogleFonts.muli(
+    color: Colors.white, fontSize: 12, fontWeight: FontWeight.w600);
+final referal_level_insideBluBoxNo = GoogleFonts.muli(
+    color: Colors.white, fontSize: 23, fontWeight: FontWeight.w600);
+
+final savingsPageTSWhite = GoogleFonts.muli(
+    color: Colors.white, fontSize: 12, fontWeight: FontWeight.w800);
+final savingsPageAMWhite = GoogleFonts.muli(
+    color: Colors.white, fontSize: 20, fontWeight: FontWeight.w800);
+final savingsPage_supplies_WhiteBoxTXT = GoogleFonts.muli(
+    color: Colors.black, fontSize: 13, fontWeight: FontWeight.w600);
+final savingsPage_Amount_WhiteBoxTXT = GoogleFonts.muli(
+    color: Color(0xff2F2651), fontSize: 20, fontWeight: FontWeight.w700);
+final savingsPage_Amount_WhiteBoxsmTXT = GoogleFonts.muli(
+    color: Color(0xff9672FB), fontSize: 12, fontWeight: FontWeight.w600);

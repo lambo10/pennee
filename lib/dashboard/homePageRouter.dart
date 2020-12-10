@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pennee/dashboard/dashboard.dart';
 import 'package:pennee/dashboard/pages/profilePage.dart';
 import 'package:pennee/dashboard/pages/referal_levelPage.dart';
+import 'package:pennee/dashboard/pages/savingsPage.dart';
 
 import 'home.dart';
 
@@ -26,6 +27,9 @@ class homePageRouter extends StatelessWidget {
             break;
           case 'referal_levelPage':
             builder = (BuildContext _) => referal_levelPage();
+            break;
+          case 'savingsPage':
+            builder = (BuildContext _) => savingsPage();
             break;
           default:
             throw Exception('Invalid route: ${settings.name}');

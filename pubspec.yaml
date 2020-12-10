@@ -76,9 +76,16 @@ flutter:
     - assets/images/A16_3.png 
     - assets/images/A16_4.png
     - assets/images/A45_1.png
+    - assets/images/A133_1.png
+    - assets/images/A133_2.png
 
     - assets/images/splashBack.png 
     - assets/images/homeHand.png
+    - assets/images/saveIcon.png
+    - assets/images/transferIcon.png
+    - assets/images/withdrawIcon.png
+    - assets/images/moreIcon.png
+
     - assets/images/fakeA1.png
     - assets/images/fakeA2.png
     - assets/images/fakeA3.png

@@ -3,6 +3,7 @@ import 'package:pennee/dashboard/modals/withdrawModal.dart';
 import 'package:pennee/dashboard/pages/profilePage.dart';
 import 'package:pennee/utilities/styles.dart';
 
+import 'modals/createWalletModal.dart';
 import 'modals/transferModal.dart';
 
 class home_page extends StatefulWidget {
@@ -161,17 +162,18 @@ class _main extends State<home_page> with SingleTickerProviderStateMixin {
                                           .pushNamed("profile_page");
                                     },
                                     child: Container(
-                                      width: 50,
-                                      height: 50,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(50),
-                                        color: Color(0xff9672FB),
-                                      ),
-                                      child: Icon(
-                                        Icons.person,
-                                        color: Colors.white,
-                                      ),
-                                    ),
+                                        width: 50,
+                                        height: 50,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(50),
+                                          color: Color(0xff9672FB),
+                                        ),
+                                        child: Padding(
+                                          padding: EdgeInsets.all(10),
+                                          child: Image.asset(
+                                              "assets/images/A45_1.png"),
+                                        )),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.only(left: 10),
@@ -194,7 +196,7 @@ class _main extends State<home_page> with SingleTickerProviderStateMixin {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   mainAxisSize: MainAxisSize.min,
                                   children: <Widget>[
-                                    Text('Resend', style: homeBeginnerBTN),
+                                    Text('Level 3', style: homeBeginnerBTN),
                                   ],
                                 ),
                               ),
@@ -379,23 +381,35 @@ class _main extends State<home_page> with SingleTickerProviderStateMixin {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Container(
-                                          width: 60,
-                                          height: 60,
-                                          decoration: BoxDecoration(
-                                            color: Color(0xff9672FB),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15)),
-                                          ),
-                                          child: Column(
-                                            children: [
-                                              SizedBox(height: 7.0),
-                                              Icon(Icons.login,
-                                                  color: Colors.white),
-                                              SizedBox(height: 3.0),
-                                              Text("Save",
-                                                  style: whiteTextBold10),
-                                            ],
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context)
+                                                .pushNamed("savingsPage");
+                                          },
+                                          child: Container(
+                                            width: 60,
+                                            height: 60,
+                                            decoration: BoxDecoration(
+                                              color: Color(0xff9672FB),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(15)),
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                SizedBox(height: 7.0),
+                                                Padding(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      5, 7, 5, 0),
+                                                  child: Container(
+                                                    child: Image.asset(
+                                                        "assets/images/saveIcon.png"),
+                                                  ),
+                                                ),
+                                                SizedBox(height: 3.0),
+                                                Text("Save",
+                                                    style: whiteTextBold10),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         GestureDetector(
@@ -416,8 +430,14 @@ class _main extends State<home_page> with SingleTickerProviderStateMixin {
                                             child: Column(
                                               children: [
                                                 SizedBox(height: 7.0),
-                                                Icon(Icons.open_in_full,
-                                                    color: Colors.white),
+                                                Padding(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      5, 7, 5, 0),
+                                                  child: Container(
+                                                    child: Image.asset(
+                                                        "assets/images/transferIcon.png"),
+                                                  ),
+                                                ),
                                                 SizedBox(height: 3.0),
                                                 Text("Transfer",
                                                     style: whiteTextBold10),
@@ -443,8 +463,14 @@ class _main extends State<home_page> with SingleTickerProviderStateMixin {
                                             child: Column(
                                               children: [
                                                 SizedBox(height: 7.0),
-                                                Icon(Icons.arrow_forward,
-                                                    color: Colors.white),
+                                                Padding(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      5, 7, 5, 0),
+                                                  child: Container(
+                                                    child: Image.asset(
+                                                        "assets/images/withdrawIcon.png"),
+                                                  ),
+                                                ),
                                                 SizedBox(height: 3.0),
                                                 Text("Withdraw",
                                                     style: whiteTextBold10),
@@ -564,7 +590,12 @@ class _main extends State<home_page> with SingleTickerProviderStateMixin {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(7),
                               side: BorderSide(color: Color(0xff9672FB))),
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) => CreateWalletModal(),
+                            );
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
