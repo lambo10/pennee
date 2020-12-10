@@ -187,7 +187,7 @@ class _verifyPhoneNoScreenState extends State<verifyPhoneNoScreen> {
                     SizedBox(height: 70.0),
                     FlatButton(
                       color: Color(0xffF6F6F9),
-                      height: 62,
+                      height: 52,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(7),
                           side: BorderSide(color: Color(0xff9672FB))),
@@ -210,7 +210,7 @@ class _verifyPhoneNoScreenState extends State<verifyPhoneNoScreen> {
                         child: FlatButton(
                           color: Color(0xff9672FB),
                           minWidth: 295,
-                          height: 62,
+                          height: 52,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(7),
                               side: BorderSide(color: Color(0xff9672FB))),

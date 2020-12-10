@@ -6,6 +6,8 @@ import 'package:pennee/dashboard/dashboard.dart';
 // import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:pennee/utilities/styles.dart';
 
+import 'dashboard/homePageRouter.dart';
+
 class sucessPageScreen extends StatefulWidget {
   @override
   _sucessPageScreenState createState() => _sucessPageScreenState();
@@ -14,7 +16,7 @@ class sucessPageScreen extends StatefulWidget {
 class _sucessPageScreenState extends State<sucessPageScreen> {
   Route _createRoute() {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => MyApp(),
+      pageBuilder: (context, animation, secondaryAnimation) => dashboardPage(),
       transitionDuration: Duration(milliseconds: 1000),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         var begin = Offset(0.0, 1.0);
@@ -52,7 +54,7 @@ class _sucessPageScreenState extends State<sucessPageScreen> {
               child: FlatButton(
                 color: Color(0xffF6F6F9),
                 minWidth: 295,
-                height: 62,
+                height: 52,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(7),
                     side: BorderSide(color: Color(0xff9672FB))),

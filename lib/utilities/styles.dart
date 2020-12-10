@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pennee/dashboard/pages/referal_levelPage.dart';
 
 final kTitleStyle = TextStyle(
   color: Colors.white,
@@ -63,6 +64,13 @@ final registerTXTLower = GoogleFonts.muli(
     fontSize: 17,
     fontWeight: FontWeight.w400);
 
+final registerTXTPrivacyP = GoogleFonts.muli(
+    textStyle: TextStyle(
+      color: Color(0xff9672FB),
+    ),
+    fontSize: 15,
+    fontWeight: FontWeight.w400);
+
 final peneeOnboardingTitleWhite = GoogleFonts.muli(
     textStyle: TextStyle(
       color: Color(0xffFFFFFF),
@@ -81,6 +89,20 @@ final skipStyleWhite = GoogleFonts.muli(
       color: Colors.white,
     ),
     fontSize: 15);
+
+final onboardingNextBtnTXTReal = GoogleFonts.muli(
+    textStyle: TextStyle(
+      color: Colors.white,
+    ),
+    fontSize: 14,
+    fontWeight: FontWeight.w600);
+
+final onboardingNextBtnTXTThemeColorReal = GoogleFonts.muli(
+    textStyle: TextStyle(
+      color: Color(0xff2F2651),
+    ),
+    fontSize: 14,
+    fontWeight: FontWeight.w600);
 
 final onboardingNextBtnTXT = GoogleFonts.muli(
     textStyle: TextStyle(
@@ -104,7 +126,8 @@ final homeUserName = GoogleFonts.muli(
     textStyle: TextStyle(
       color: Color(0xff2F2651),
     ),
-    fontSize: 12);
+    fontSize: 12,
+    fontWeight: FontWeight.w700);
 
 final homeBeginnerBTN = GoogleFonts.muli(
     textStyle: TextStyle(
@@ -160,3 +183,86 @@ final colordTextBold20 = GoogleFonts.muli(
     ),
     fontSize: 20,
     fontWeight: FontWeight.w500);
+
+final home_oppsTXT = GoogleFonts.muli(
+    textStyle: TextStyle(
+      color: Color(0xff232949),
+    ),
+    fontSize: 19,
+    fontWeight: FontWeight.w800);
+
+final low_WelcomeTo_peneeTXT = GoogleFonts.muli(
+    textStyle: TextStyle(
+      color: Color(0xff000000),
+    ),
+    fontSize: 15,
+    fontWeight: FontWeight.w700);
+
+final low_WelcomeTo_peneeTXT_sub = GoogleFonts.muli(
+    textStyle: TextStyle(
+      color: Color(0xff7A7991),
+    ),
+    fontSize: 12,
+    fontWeight: FontWeight.w700);
+
+final low_WelcomeTo_mainTXT = GoogleFonts.muli(
+    textStyle: TextStyle(
+      color: Color(0xff7A7991),
+    ),
+    fontSize: 11,
+    fontWeight: FontWeight.w500);
+
+final homeTabeTXT_h = GoogleFonts.muli(
+    color: Color(0xff232949), fontSize: 15, fontWeight: FontWeight.w700);
+
+final noTransacTXT = GoogleFonts.muli(
+  color: Color(0xff232949),
+  fontSize: 25,
+);
+
+final modalTXT = GoogleFonts.muli(
+  color: Color(0xff7A7991),
+  fontSize: 15,
+);
+
+final modalTXT_Title = GoogleFonts.muli(
+    color: Color(0xff232949), fontSize: 18, fontWeight: FontWeight.w700);
+
+final modalTXT_Title_sub = GoogleFonts.muli(
+    color: Color(0xff232949), fontSize: 15, fontWeight: FontWeight.w500);
+
+final penneBoxTxt = GoogleFonts.muli(
+    color: Color(0xff232949), fontSize: 15, fontWeight: FontWeight.w500);
+
+final analytics_uName = GoogleFonts.muli(
+    color: Colors.white, fontSize: 15, fontWeight: FontWeight.w700);
+final analytics_TopHeader = GoogleFonts.muli(
+    color: Colors.white, fontSize: 20, fontWeight: FontWeight.w800);
+
+final exsit_app_popTXT = GoogleFonts.muli(
+    color: Color(0xff232949), fontSize: 20, fontWeight: FontWeight.w500);
+final exsit_app_popOptionTXT = GoogleFonts.muli(
+    color: Color(0xff232949), fontSize: 15, fontWeight: FontWeight.w500);
+
+final profile_pageName = GoogleFonts.muli(
+    color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500);
+
+final profile_pageEmail = GoogleFonts.muli(
+    color: Colors.white, fontSize: 15, fontWeight: FontWeight.w300);
+
+final profile_pageSideBoldTXT = GoogleFonts.muli(
+    color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600);
+
+final profile_pageSideLightTXT = GoogleFonts.muli(
+    color: Colors.white, fontSize: 15, fontWeight: FontWeight.w300);
+
+final referal_levelPageConHeader = GoogleFonts.muli(
+    color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600);
+
+final referal_levelPageConLevTXT = GoogleFonts.muli(
+    color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600);
+
+final referal_levelPageWContHeader = GoogleFonts.muli(
+    color: Color(0xff24214C), fontSize: 20, fontWeight: FontWeight.w600);
+final referal_levelPageWContNormTXT = GoogleFonts.muli(
+    color: Color(0xffA2A1B2), fontSize: 15, fontWeight: FontWeight.w600);

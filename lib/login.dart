@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pennee/dashboard/dashboard.dart';
+import 'package:pennee/register1.dart';
 // import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:pennee/utilities/styles.dart';
+
+import 'dashboard/homePageRouter.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -12,6 +16,47 @@ class _LoginScreenState extends State<LoginScreen> {
   double _calcHeightpercentage(double percentage) {
     var screenHeight = MediaQuery.of(context).size.height;
     return ((percentage / screenHeight) * 100);
+  }
+
+  Route _createRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => dashboardPage(),
+      transitionDuration: Duration(milliseconds: 1000),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.fastLinearToSlowEaseIn;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      },
+    );
+  }
+
+  Route _createRoute2() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) =>
+          Register1Screen(),
+      transitionDuration: Duration(milliseconds: 1000),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.fastLinearToSlowEaseIn;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      },
+    );
   }
 
   @override
@@ -94,12 +139,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     FlatButton(
                       color: Color(0xff9672FB),
                       minWidth: 295,
-                      height: 62,
+                      height: 52,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(7),
                           side: BorderSide(color: Color(0xff9672FB))),
                       onPressed: () {
-                        // action
+                        Navigator.of(context).push(_createRoute());
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -123,13 +168,19 @@ class _LoginScreenState extends State<LoginScreen> {
                               textAlign: TextAlign.left,
                             )),
                             Container(
+                              child: GestureDetector(
+                                behavior: HitTestBehavior.opaque,
+                                onTap: () =>
+                                    Navigator.of(context).push(_createRoute2()),
                                 child: Padding(
                                     padding: EdgeInsets.only(left: 30),
                                     child: Text(
                                       'Sign up',
                                       style: loginTXTLower,
                                       textAlign: TextAlign.right,
-                                    ))),
+                                    )),
+                              ),
+                            ),
                           ]),
                         )))
                   ],

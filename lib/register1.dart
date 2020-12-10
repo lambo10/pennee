@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pennee/login.dart';
 import 'package:pennee/register2.dart';
 // import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:pennee/utilities/styles.dart';
@@ -17,6 +18,26 @@ class _Register1ScreenState extends State<Register1Screen> {
       transitionDuration: Duration(milliseconds: 1000),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         var begin = Offset(1.0, 0.0);
+        var end = Offset.zero;
+        var curve = Curves.fastLinearToSlowEaseIn;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      },
+    );
+  }
+
+  Route _createRoute2() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => LoginScreen(),
+      transitionDuration: Duration(milliseconds: 1000),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
         var end = Offset.zero;
         var curve = Curves.fastLinearToSlowEaseIn;
 
@@ -115,7 +136,7 @@ class _Register1ScreenState extends State<Register1Screen> {
                           child: FlatButton(
                             color: Color(0xff9672FB),
                             minWidth: 295,
-                            height: 62,
+                            height: 52,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(7),
                                 side: BorderSide(color: Color(0xff9672FB))),
@@ -132,11 +153,15 @@ class _Register1ScreenState extends State<Register1Screen> {
                           ),
                         )),
                     SizedBox(height: 45.0),
-                    Text(
-                      'Already have an account?',
-                      style: registerTXTLower,
-                      textAlign: TextAlign.center,
-                    )
+                    GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () =>
+                            Navigator.of(context).push(_createRoute2()),
+                        child: Text(
+                          'Already have an account?',
+                          style: registerTXTLower,
+                          textAlign: TextAlign.center,
+                        )),
                   ],
                 )),
           )),

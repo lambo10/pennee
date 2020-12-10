@@ -59,14 +59,47 @@ flutter:
     - assets/images/logo.png
     - assets/images/penneeLogoWriteup.png
     - assets/images/A3.png
+    - assets/images/A3_SUB.png
     - assets/images/A4.png
+    - assets/images/A4_SUB.png
     - assets/images/A5.png
     - assets/images/A6.png
+    - assets/images/A6_SUB.png
     - assets/images/A7.png 
+    - assets/images/A7_next.png 
+    - assets/images/A7_next_SUB.png 
     - assets/images/A8.png 
     - assets/images/A13.png 
     - assets/images/A14.png 
-    - assets/images/splashBack.png
+    - assets/images/A16.png 
+    - assets/images/A16_2.png 
+    - assets/images/A16_3.png 
+    - assets/images/A16_4.png
+    - assets/images/A45_1.png
+
+    - assets/images/splashBack.png 
+    - assets/images/homeHand.png
+    - assets/images/fakeA1.png
+    - assets/images/fakeA2.png
+    - assets/images/fakeA3.png
+    - assets/images/fakeA4.png
+    - assets/images/fakeA5.png
+    - assets/images/fakeA6.png
+    - assets/images/fakeA7.png
+    - assets/images/fakeA8.png
+    - assets/images/fakeA9.png
+    - assets/images/fakeS1.png
+    - assets/images/fakeS2.png
+    - assets/images/fakeS2SUB2.png
+    - assets/images/fakeS2SUB3.png
+    - assets/images/fakeS3.png
+    - assets/images/fakeS4.png
+    - assets/images/fakeC1.png
+    - assets/images/fakeC2.png
+    - assets/images/fakeC3.png
+    - assets/images/fakeC4.png
+    - assets/images/fakeC5.png
+    - assets/images/fakeC6.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

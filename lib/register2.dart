@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pennee/dashboard/dashboard.dart';
+import 'package:pennee/login.dart';
 // import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:pennee/utilities/styles.dart';
 import 'package:pennee/verifyPhoneNo.dart';
@@ -17,6 +19,26 @@ class _Register2ScreenState extends State<Register2Screen> {
       transitionDuration: Duration(milliseconds: 1000),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         var begin = Offset(1.0, 0.0);
+        var end = Offset.zero;
+        var curve = Curves.fastLinearToSlowEaseIn;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      },
+    );
+  }
+
+  Route _createRoute2() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => dashboardPage(),
+      transitionDuration: Duration(milliseconds: 1000),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
         var end = Offset.zero;
         var curve = Curves.fastLinearToSlowEaseIn;
 
@@ -107,7 +129,87 @@ class _Register2ScreenState extends State<Register2Screen> {
                                       borderSide: BorderSide(
                                           color: Color(0xff9672FB)))),
                             ))),
-                    SizedBox(height: 70.0),
+                    SizedBox(height: 10.0),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                      child: Container(
+                        width: double.infinity,
+                        child: RichText(
+                          textAlign: TextAlign.left,
+                          text: TextSpan(
+                            children: [
+                              WidgetSpan(
+                                  child: Padding(
+                                padding: EdgeInsets.only(right: 5),
+                                child: Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(3)),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.2),
+                                          spreadRadius: 2,
+                                          blurRadius:
+                                              10, // changes position of shadow
+                                        ),
+                                      ]),
+                                ),
+                              )),
+                              TextSpan(
+                                  text: "I agree with the ",
+                                  style: registerOtherTXT),
+                              TextSpan(
+                                  text: "Privacy policy",
+                                  style: registerTXTPrivacyP)
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 5.0),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                      child: Container(
+                        width: double.infinity,
+                        child: RichText(
+                          textAlign: TextAlign.left,
+                          text: TextSpan(
+                            children: [
+                              WidgetSpan(
+                                  child: Padding(
+                                padding: EdgeInsets.only(right: 5),
+                                child: Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(3)),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.2),
+                                          spreadRadius: 2,
+                                          blurRadius:
+                                              10, // changes position of shadow
+                                        ),
+                                      ]),
+                                ),
+                              )),
+                              TextSpan(
+                                  text: "I agree with the ",
+                                  style: registerOtherTXT),
+                              TextSpan(
+                                  text: "Privacy policy",
+                                  style: registerTXTPrivacyP)
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 30.0),
                     Container(
                         alignment: Alignment.bottomCenter,
                         child: Padding(
@@ -115,7 +217,7 @@ class _Register2ScreenState extends State<Register2Screen> {
                           child: FlatButton(
                             color: Color(0xff9672FB),
                             minWidth: 295,
-                            height: 62,
+                            height: 52,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(7),
                                 side: BorderSide(color: Color(0xff9672FB))),
@@ -131,12 +233,16 @@ class _Register2ScreenState extends State<Register2Screen> {
                             ),
                           ),
                         )),
-                    SizedBox(height: 45.0),
-                    Text(
-                      'Already have an account?',
-                      style: registerTXTLower,
-                      textAlign: TextAlign.center,
-                    )
+                    SizedBox(height: 35.0),
+                    GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () =>
+                            Navigator.of(context).push(_createRoute2()),
+                        child: Text(
+                          'Already have an account?',
+                          style: registerTXTLower,
+                          textAlign: TextAlign.center,
+                        ))
                   ],
                 )),
           )),
